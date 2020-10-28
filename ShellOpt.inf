@@ -1,0 +1,33 @@
+[Defines]
+  INF_VERSION                    = 0x00010006
+  BASE_NAME                      = ShellOpt
+  FILE_GUID                      = AAC2EA6F-D4C8-4e43-996A-9CDB20742C86
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 0.1
+  ENTRY_POINT                    = ShellCEntryLib
+
+#
+#  VALID_ARCHITECTURES           = IA32 X64 IPF
+#
+
+[Sources]
+  ShellOpt.c
+
+[Packages]
+  StdLib/StdLib.dec
+  MdePkg/MdePkg.dec
+  ShellPkg/ShellPkg.dec
+
+[LibraryClasses]
+  LibC
+  LibStdio
+  UefiLib
+  PrintLib
+
+[Guids]
+  gShellVariableGuid
+
+[Protocols]
+
+[BuildOptions]
+
